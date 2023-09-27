@@ -9,7 +9,7 @@ import {
 
 function Footer() {
   return (
-    <Footer className="footer">
+    <div className="footer">
       <ContentWrapper>
         <ul className="menuItems">
           <li className="menuItem">Terms Of Use</li>
@@ -41,7 +41,7 @@ function Footer() {
           </span>
         </div>
       </ContentWrapper>
-    </Footer>
+    </div>
   );
 }
 
