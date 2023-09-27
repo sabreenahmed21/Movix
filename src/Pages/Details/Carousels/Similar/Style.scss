@@ -1,0 +1,8 @@
+@import '../../../../Mixin.scss';
+
+.similar-section{
+  margin: 20px 0;
+  @include md {
+    margin: 45px 0;
+  }
+}

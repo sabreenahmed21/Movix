@@ -1,0 +1,52 @@
+@import '../../../Mixin.scss';
+
+.videosSection{
+  margin: 50px 0;
+  .sectionHeading{
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+    .swiper-wrapper {
+      gap: 15px;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: var(--black);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &.videoItem {
+        display: block;
+        
+        .videoThumbnail {
+          position: relative;
+          text-align: start;
+          .videoImg {
+            border-radius: 12px;
+            cursor: pointer;
+          }
+          .iconPlay {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-37px, -7px);
+            width: 39px;
+            height: 36px;
+            font-weight: 900;
+            cursor: pointer;
+          }
+        }
+        .videoTitle {
+          text-align: start;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+  
+}

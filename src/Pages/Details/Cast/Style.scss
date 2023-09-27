@@ -1,0 +1,99 @@
+@import "../../../Mixin.scss";
+
+.castSkeleton {
+  display: flex;
+  gap: 20px;
+  overflow-y: hidden;
+  margin-right: -20px;
+  margin-left: -20px;
+  padding: 0 20px;
+  @include md {
+    margin: 0;
+    padding: 0;
+  }
+  .skItem {
+    .circle {
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      @include md {
+        width: 175px;
+        height: 175px;
+        margin-bottom: 25px;
+      }
+    }
+    .row {
+      width: 100%;
+      height: 20px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .row2 {
+      width: 75%;
+      height: 20px;
+      border-radius: 10px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.sectionCast {
+  margin: 50px 0;
+  position: relative;
+  .cast-header {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: var(--black);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .castBox {
+        display: block;
+        .castImage {
+          width: 64px;
+          height: 69px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-bottom: 15px;
+          @include lg {
+            width: 175px;
+            height: 175px;
+            margin-bottom: 25px;
+          }
+          .cast-img {
+            display: block;
+            object-fit: cover;
+            object-position: center ;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .castText {
+          .castName{
+            font-size: 11px;
+            margin-bottom: 11px;
+            @include lg {
+              font-size: 20px;
+            }
+          }
+          .castCharacter{
+            font-size: 9px;
+            color: gray;
+            @include lg {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

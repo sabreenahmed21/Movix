@@ -1,0 +1,162 @@
+@import "../../../Mixin.scss";
+.detailsBanner {
+  padding-top: 100px;
+  margin-bottom: 50px;
+  .backdropImg_detail {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    overflow: hidden;
+    .img_details {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .opacity-layer {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(180deg, rgba(4, 21, 45, 0) 0%, #04152d 79.17%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 25px;
+    @include md {
+      gap: 50px;
+      flex-direction: row;
+    }
+    .left {
+      flex-shrink: 0;
+      .img-poster_details {
+        width: 100%;
+        display: block;
+        border-radius: 12px;
+        @include md {
+          max-width: 350px;
+        }
+      }
+    }
+    .right {
+      letter-spacing: 0.9px;
+      .title {
+        margin-bottom: 14px;
+        font-size: 27px;
+      }
+      .sub_title {
+        margin-bottom: 16px;
+        font-size: 17px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 16px 0;
+        gap: 20px;
+        .playbtn {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 18px;
+          cursor: pointer;
+          &:hover{
+            color: var(--pink);
+          }
+        }
+      }
+      .overview {
+        margin-bottom: 30px;
+        .heading {
+          margin-bottom: 16px;
+          font-size: 18px;
+        }
+        .description {
+          line-height: 1.5;
+        }
+      }
+      .status {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 16px;
+        @include lg {
+          flex-direction: row;
+        }
+        .infoItem {
+          span {
+            &:last-child {
+              color: gray;
+            }
+            &:first-child {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      .info {
+        margin-bottom: 20px;
+        .span-info {
+          font-weight: 600;
+        }
+        span {
+          &:last-child {
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+.detailsBannerSkeleton {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 25px;
+  padding-top: 100px;
+  margin-bottom: 50px;
+  @include md {
+    gap: 50px;
+    flex-direction: row;
+  }
+  .contentWrapper {
+    display: flex;
+    gap: 50px;
+  }
+  .left {
+    flex-shrink: 0;
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    aspect-ratio: 1/1.5;
+    @include md {
+      max-width: 350px;
+    }
+  }
+  .right {
+    width: 100%;
+    .row {
+      width: 100%;
+      height: 25px;
+      margin-bottom: 20px;
+      border-radius: 50px;
+      &:nth-child(2) {
+        width: 75%;
+        margin-bottom: 50px;
+      }
+      &:nth-child(5) {
+        width: 50%;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
