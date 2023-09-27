@@ -4,11 +4,10 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Select from "react-select";
-import "./style.scss";
 
 import UseFetch from "../../Hooks/UseFetch";
 import { fetchDataFromApi } from "../../utilities/Api";
-import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
+import ContentWrapper from "../../Components/ContentWrapper/ContentWrapper";
 import MovieCard from "../../Components/MovieCard/MovieCard";
 
 let filters = {};
