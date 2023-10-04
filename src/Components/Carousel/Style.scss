@@ -19,6 +19,10 @@
       display: block;
       .posterBlock {
         position: relative;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.5;
+        }
         img {
           display: block;
           width: 100%;
@@ -86,5 +90,21 @@
 @include lg {
   .genres {
     display: flex;
+  }
+}
+
+.textBlock {
+  margin-top: 10px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  .title-carousel {
+    font-size: 18px;
+  }
+  .date-carousel {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    color: gray;
   }
 }
