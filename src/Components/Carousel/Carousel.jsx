@@ -57,13 +57,13 @@ function Carousel({ data, endPoint, title }) {
               <div className="posterBlock">
                 <Image src={poster_url} className="img-carousel" />
                 <div className="rate-genre">
-                  <CircleRating rating={item?.vote_average.toFixed(1)} />
-                  <Genres data={item?.genre_ids.slice(0, 1)} />
+                  <CircleRating rating={item?.vote_average?.toFixed(1)} />
+                  <Genres data={item?.genre_ids?.slice(0, 1)} />
                 </div>
               </div>
               <div className="textBlock">
                 <span className="title-carousel">
-                  {item?.title || item?.name}
+                  {item.title || item.name}
                 </span>
                 <span className="date-carousel">
                   {dayjs(item?.release_date || item?.first_air_date).format(
