@@ -43,30 +43,30 @@ function Carousel({ data, endPoint, title }) {
   const swiper = (
     <Swiper {...SWIPER_SETTINGS} className="mySwiper">
       {data.map((item) => {
-        const poster_url = item.poster_path
-          ? url.poster + item.poster_path
+        const poster_url = item?.poster_path
+          ? url.poster + item?.poster_path
           : Poster;
         return (
           <SwiperSlide
             key={item.id}
             onClick={() =>
-              navigate(`/${item.media_type || endPoint}/${item.id}`)
+              navigate(`/${item?.media_type || endPoint}/${item.id}`)
             }
           >
             <div className="box-carousel">
               <div className="posterBlock">
                 <Image src={poster_url} className="img-carousel" />
                 <div className="rate-genre">
-                  <CircleRating rating={item.vote_average.toFixed(1)} />
-                  <Genres data={item.genre_ids.slice(0, 1)} />
+                  <CircleRating rating={item?.vote_average.toFixed(1)} />
+                  <Genres data={item?.genre_ids.slice(0, 1)} />
                 </div>
               </div>
               <div className="textBlock">
                 <span className="title-carousel">
-                  {item.title || item.name}
+                  {item?.title || item?.name}
                 </span>
                 <span className="date-carousel">
-                  {dayjs(item.release_date || item.first_air_date).format(
+                  {dayjs(item?.release_date || item?.first_air_date).format(
                     "MMM D, YYYY"
                   )}
                 </span>
